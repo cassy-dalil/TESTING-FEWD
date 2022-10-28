@@ -1,0 +1,99 @@
+/* <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> */
+
+  /* - Mobile: 375px
+  - Desktop: 1440px
+  
+  ## Colors
+  
+  ### Primary
+  
+  - Dark cyan: hsl(158, 36%, 37%)
+  - Cream: hsl(30, 38%, 92%)
+  
+  ### Neutral
+  
+  - Very dark blue: hsl(212, 21%, 14%)
+  - Dark grayish blue: hsl(228, 12%, 48%)
+  - White: hsl(0, 0%, 100%)
+  
+  ## Typography
+  
+  ### Body Copy
+  
+  - Font size (paragraph): 14px
+  
+  ### Font
+  
+  - Family: [Montserrat](https://fonts.google.com/specimen/Montserrat)
+  - Weights: 500, 700
+  
+  - Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
+  - Weights: 700 */
+
+  /* COLORS */
+
+  body {
+    background-color: var(--cream);
+    font-size: 11px; 
+    text-align: center; 
+  }
+    
+  
+  :root {
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --white: hsl(0, 0%, 100%);
+  }
+
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    padding: 0;
+    border-radius: 10px;
+    background-color: var(--white);
+    width: 300px;
+    height: 450px;
+  }
+
+  .sub-container {
+    height: 225px;
+    width: 275px;
+  }
+
+  #picture-div {
+    background-image: url('./images/image-product-mobile.jpg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: 1440px) {
+    #picture-div {
+        background-image: url('./images/image-product-desktop.jpg');
+    }
+
+    .main-container {
+        width: 600px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 10px auto;
+        padding: 0;
+    }
+
+    .sub-container {
+        height: 400px;
+        width: 300px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+  }
